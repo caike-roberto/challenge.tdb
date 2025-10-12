@@ -1,0 +1,240 @@
+/* Estilo geral do site  */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Paleta */
+:root {
+  --verde: #cede03;
+  --laranja: #ff8000;
+  --amarelo: #fbff00;
+  --cinza-texto: #333;
+  --branco: #fff;
+  --cinza-fundo: #f2f2f2;
+}
+
+/* Corpo */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--branco);
+  color: var(--cinza-texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--verde);
+  color: var(--laranja);
+  padding: 20px 60px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  font-size: 1.2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--laranja);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+nav a.active {
+  border-bottom: 2px solid var(--laranja);
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 100px;
+  flex-wrap: wrap;
+  background-color: var(--branco);
+}
+
+.hero-texto {
+  max-width: 500px;
+}
+
+.hero-texto h2 {
+  font-size: 2.5rem;
+  color: var(--laranja);
+  margin-bottom: 20px;
+}
+
+.hero-texto p {
+  font-size: 1.1rem;
+  color: var(--cinza-texto);
+  margin-bottom: 30px;
+}
+
+.hero-imagem img {
+  width: 450px;
+  max-width: 100%;
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: var(--verde);
+  color: var(--laranja);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--amarelo);
+}
+
+/* Conteúdo interno */
+.content {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: var(--verde);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: var(--laranja);
+}
+
+.content h2, .content h3 {
+  color: var(--laranja);
+  margin-bottom: 15px;
+}
+
+.content p {
+  color: var(--branco);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Integrantes */
+.integrante {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.integrante img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid var(--laranja);
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 2px solid var(--laranja);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button.btn {
+  cursor: pointer;
+  border: none;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--verde);
+  color: var(--laranja);
+  text-align: center;
+  padding: 25px;
+  margin-top: auto;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: var(--laranja);
+  margin: 5px;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--amarelo);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 30px;
+  }
+
+  .hero-imagem {
+    margin-top: 30px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+}
+
+/* Ajuste 1300px obrigatório */
+@media (min-width: 1300px) {
+  .content {
+    max-width: 1100px;
+  }
+
+  .hero-texto h2 {
+    font-size: 3rem;
+  }
+
+  .hero-texto p {
+    font-size: 1.2rem;
+  }
+
+  .hero-imagem img {
+    width: 550px;
+  }
+}
