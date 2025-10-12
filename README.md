@@ -1,1 +1,19 @@
-"# challenge.tdb"  
+
+# Central de Atendimentos - Projeto ONG
+
+## 📖 Descrição
+Ferramenta integrada de gestão de atendimentos para organizar, 
+direcionar e controlar todos os contatos dos públicos: dentistas, voluntários, beneficiados, doadores e 
+pessoas que solicitam ajuda.
+
+## 🚀 Link do Projeto (GitHub Pages)
+👉 [](link git)
+
+## 🧩 Estrutura do Projeto
+- index.html — Página inicial  
+- sobre.html — Sobre o projeto  
+- faq.html — Perguntas frequentes  
+- contato.html — Página de contato com formulário  
+- integrantes.html — Página da equipe com fotos e links  
+- style.css — Estilos compartilhados  
+- assets/img/ — Fotos dos integrantes
