@@ -1,11 +1,11 @@
-// script.js
+// script.geral
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Atualiza ano no rodapé
+  
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Menu mobile toggle
+  
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('primary-navigation');
   menuToggle && menuToggle.addEventListener('click', () => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.classList.toggle('active');
   });
 
-  // Fechar menu ao clicar fora (melhora usabilidade)
+  
   document.addEventListener('click', (e) => {
     if (!nav) return;
     if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Newsletter form - validação simples e localStorage
+  
   const newsletterForm = document.getElementById('newsletter-form');
   const nemail = document.getElementById('nemail');
   const nmsg = document.getElementById('newsletter-msg');
 
   if (newsletterForm) {
-    // Preencher automaticamente se já tiver email salvo
+    
     const savedEmail = localStorage.getItem('newsletterEmail');
     if (savedEmail) {
       nemail.value = savedEmail;
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nemail.focus();
         return;
       }
-      // validação simples de formato
+    
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!re.test(emailVal)) {
         nmsg.textContent = 'Insira um email válido.';
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // sucesso: salvar no localStorage e mostrar mensagem
+    
       localStorage.setItem('newsletterEmail', emailVal);
       nmsg.textContent = 'Obrigado! Email salvo com sucesso.';
       nmsg.style.color = ''; // mantém cor do CSS
