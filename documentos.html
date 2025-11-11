@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enviar Documentos</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="documentos.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="imagens/turmalogo.png" alt="Logo do site" class="logo">
+        <span>Gestão Comunica Bem</span>
+      </a>
+      <nav class="primary-nav">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="formulario.html">Formulário</a></li>
+         <li><a href="documentos.html">Enviar Documentos</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Envio de Documentos</h1>
+    <p>Envie seus arquivos abaixo. Os documentos enviados serão listados abaixo.</p>
+
+    <form id="docForm" class="card">
+      <label for="nomeArquivo">Nome do documento</label>
+      <input type="text" id="nomeArquivo" placeholder="Ex: RG, CPF, Comprovante..." required>
+
+      <label for="arquivo">Selecione o arquivo</label>
+      <input type="file" id="arquivo" accept=".pdf, .jpg, .jpeg, .png, .docx" required>
+
+      <input type="submit" value="Enviar Documento">
+    </form>
+
+    <section id="listaDocumentos" class="card">
+      <h2>Documentos Enviados</h2>
+      <ul id="documentosSalvos"></ul>
+      <button id="limparLista">🗑️ Limpar lista</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Meu Site Responsivo</p>
+  </footer>
+</body>
+</html>

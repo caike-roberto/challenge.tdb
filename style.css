@@ -1,240 +1,404 @@
-/* Estilo geral do site  */
+/* ================================
+   VARIÁVEIS
+================================ */
+:root {
+  --verde: #4CAF50;
+  --verde-escuro: #388E3C;
+  --laranja: #FF9800;
+  --laranja-escuro: #F57C00;
+  --branco: #ffffff;
+  --cinza-claro: #f5f5f5;
+  --cinza: #555;
+  --fonte-principal: 'Poppins', sans-serif;
+}
 
-/* Reset */
+/* ================================
+   RESET
+================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Paleta */
-:root {
-  --verde: #cede03;
-  --laranja: #ff8000;
-  --amarelo: #fbff00;
-  --cinza-texto: #333;
-  --branco: #fff;
-  --cinza-fundo: #f2f2f2;
-}
-
-/* Corpo */
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: var(--branco);
-  color: var(--cinza-texto);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  font-family: var(--fonte-principal);
+  background: var(--branco);
+  color: var(--cinza);
+  line-height: 1.6;
 }
 
-/* Cabeçalho */
-header {
-  background-color: var(--verde);
-  color: var(--laranja);
-  padding: 20px 60px;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-nav {
+/* ================================
+   HEADER
+================================ */
+.site-header {
+  background: var(--verde);
+  color: var(--branco);
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-nav h1 {
-  font-size: 1.2rem;
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--branco);
+  font-weight: 600;
+  font-size: 1.3rem;
 }
 
-nav ul {
+.brand .logo {
+  width: 40px;
+  margin-right: 8px;
+}
+
+/* NAV */
+.primary-nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
-nav a {
-  color: var(--laranja);
+.primary-nav a {
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  opacity: 0.8;
-}
-
-nav a.active {
-  border-bottom: 2px solid var(--laranja);
-}
-
-/* Hero */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 100px;
-  flex-wrap: wrap;
-  background-color: var(--branco);
-}
-
-.hero-texto {
-  max-width: 500px;
-}
-
-.hero-texto h2 {
-  font-size: 2.5rem;
-  color: var(--laranja);
-  margin-bottom: 20px;
-}
-
-.hero-texto p {
-  font-size: 1.1rem;
-  color: var(--cinza-texto);
-  margin-bottom: 30px;
-}
-
-.hero-imagem img {
-  width: 450px;
-  max-width: 100%;
-}
-
-/* Botão */
-.btn {
-  display: inline-block;
-  padding: 14px 30px;
-  background-color: var(--verde);
-  color: var(--laranja);
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: var(--amarelo);
-}
-
-/* Conteúdo interno */
-.content {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 30px;
-  background-color: var(--verde);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  color: var(--laranja);
-}
-
-.content h2, .content h3 {
-  color: var(--laranja);
-  margin-bottom: 15px;
-}
-
-.content p {
   color: var(--branco);
-  line-height: 1.6;
-  margin-bottom: 20px;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-/* Integrantes */
-.integrante {
-  margin-bottom: 40px;
-  text-align: center;
+.primary-nav a:hover {
+  color: var(--laranja);
 }
 
-.integrante img {
-  width: 150px;
-  height: 150px;
+.primary-nav a.active {
+  color: var(--branco);
+}
+
+.primary-nav a.active:hover {
+  color: var(--laranja);
+}
+
+/* ================================
+   MAIN
+================================ */
+main {
+  padding: 2rem 0;
+}
+
+h1, h2, h3 {
+  color: var(--verde-escuro);
+}
+
+/* ================================
+   CARD
+================================ */
+.card {
+  background: var(--cinza-claro);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ================================
+   BOTÕES + SUBMIT
+================================ */
+button,
+input[type="submit"] {
+  background: var(--branco);
+  color: var(--laranja);
+  border: 2px solid var(--laranja);
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: var(--laranja);
+  color: var(--branco);
+}
+
+form.card input[type="submit"] {
+  background: var(--branco);
+  color: var(--laranja);
+  border: 2px solid var(--laranja);
+}
+
+form.card input[type="submit"]:hover {
+  background: var(--laranja);
+  color: var(--branco);
+}
+
+
+/* ================================
+   IMAGENS — REGRAS GERAIS
+================================ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================================
+   HOME — HERO
+================================ */
+.hero-figure img {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+/* ================================
+   INTEGRANTES
+================================ */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.member img {
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 15px;
-  border: 3px solid var(--laranja);
+  margin: 0 auto 0.5rem;
 }
 
-/* Formulário */
+/* ================================
+   FORMULÁRIO
+================================ */
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  background: var(--cinza-claro);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-top: 2rem;
 }
 
-label {
+form label {
   font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
 }
 
-input, textarea {
-  padding: 10px;
-  border: 2px solid var(--laranja);
+form input,
+form textarea,
+select {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
 }
 
-button.btn {
-  cursor: pointer;
-  border: none;
+fieldset {
+  border: 2px solid var(--verde);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Rodapé */
+legend {
+  font-weight: 600;
+  color: var(--verde-escuro);
+}
+
+/* ================================
+   ENVIAR DOCUMENTOS
+================================ */
+#listaDocumentos {
+  margin-top: 2rem;
+}
+
+#listaDocumentos ul {
+  list-style: none;
+  padding: 0;
+}
+
+#listaDocumentos li {
+  background: var(--cinza-claro);
+  margin-bottom: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#listaDocumentos li span {
+  font-weight: 500;
+}
+
+#limparLista {
+  margin-top: 1rem;
+}
+
+/* ================================
+   FOOTER
+================================ */
 footer {
-  background-color: var(--verde);
-  color: var(--laranja);
+  background: var(--verde);
+  color: var(--branco);
+  padding: 1rem;
   text-align: center;
-  padding: 25px;
-  margin-top: auto;
+  margin-top: 2rem;
 }
 
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons a {
-  color: var(--laranja);
-  margin: 5px;
-  font-size: 1.3rem;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: var(--amarelo);
-}
-
-/* Responsivo */
-@media (max-width: 900px) {
-  .hero {
+/* ================================
+   RESPONSIVO
+================================ */
+@media (max-width: 600px) {
+  .primary-nav ul {
+    display: none;
     flex-direction: column;
+    width: 100%;
+    gap: 0;
+    background: var(--verde);
+    margin-top: 1rem;
+    border-radius: 8px;
+  }
+
+  .primary-nav ul.active {
+    display: flex;
+  }
+
+  .primary-nav li {
     text-align: center;
-    padding: 60px 30px;
-  }
-
-  .hero-imagem {
-    margin-top: 30px;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul {
-    justify-content: center;
+    padding: 0.8rem 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
   }
 }
+/* ===== MENU TOGGLE (hambúrguer) ===== */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 28px;
+  position: relative;
+}
 
-/* Ajuste 1300px obrigatório */
-@media (min-width: 1300px) {
-  .content {
-    max-width: 1100px;
-  }
+.menu-toggle .hamburger,
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--branco);
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: 0.3s ease;
+}
 
-  .hero-texto h2 {
-    font-size: 3rem;
-  }
+.menu-toggle .hamburger {
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-  .hero-texto p {
-    font-size: 1.2rem;
-  }
+.menu-toggle .hamburger::before {
+  top: -10px;
+}
 
-  .hero-imagem img {
-    width: 550px;
-  }
+.menu-toggle .hamburger::after {
+  top: 10px;
+}
+
+/* Animação quando o menu estiver ativo */
+.menu-toggle.active .hamburger {
+  background: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-toggle.active .hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+/* ===== MENU TOGGLE (hambúrguer) ===== */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 28px;
+  position: relative;
+}
+
+.menu-toggle .hamburger,
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--branco);
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+.menu-toggle .hamburger {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-toggle .hamburger::before {
+  top: -10px;
+}
+
+.menu-toggle .hamburger::after {
+  top: 10px;
+}
+
+/* Animação quando o menu estiver ativo */
+.menu-toggle.active .hamburger {
+  background: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-toggle.active .hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+button,
+input[type="submit"] {
+  background: var(--branco);
+  color: var(--laranja);
+  border: 2px solid var(--laranja);
+}
+/* Corrige o fundo e a borda do botão de menu */
+.menu-toggle {
+  background: none !important;
+  border: none !important;
+  outline: none;
 }

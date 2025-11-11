@@ -1,64 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Sobre | Central de Atendimentos Turma do Bem</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sobre — Projeto Challenge</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Turma do Bem - Central de Atendimentos</h1>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html" class="active">Sobre</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="integrantes.html">Integrantes</a></li>
-      </ul>
-    </nav>
+ 
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="imagens/turmalogo.png" alt="Logotipo" class="logo" />
+        <span class="brand-name">Gestão Comunica Bem</span>
+      </a>
+
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="formulario.html">Formulário</a></li>
+         <li><a href="documentos.html">Enviar Documentos</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="content">
-      <h2>Sobre o Projeto</h2>
-      <p>
-        A <strong>Turma do Bem</strong> é uma ONG que oferece tratamento odontológico gratuito 
-        para pessoas em situação de vulnerabilidade social, conectando dentistas voluntários 
-        a crianças, jovens e mulheres vítimas de violência.
-      </p>
+  <main id="main" class="container">
+    <section aria-labelledby="sobre-titulo">
+      <h1 id="sobre-titulo">Sobre o Projeto</h1>
+      <p>O <strong>Gestão Comunica Bem</strong> é uma iniciativa desenvolvida durante o Challenge, com o objetivo de facilitar os problemas enfrentados pela ong.</p>
+      <p>Nosso foco é criar um meio de comunicaçao e banco de dados facil e rapido em um lugar apenas</p>
 
-      <h3>Dentista do Bem</h3>
-      <p>
-        Programa voltado para o atendimento gratuito de jovens entre 11 e 17 anos 
-        em situação de vulnerabilidade social.
-      </p>
+      <article class="card">
+        <h2>Objetivos principais</h2>
+        <ul>
+          <li>Possibilitar toda comunicaçao em apenas um local de maneira facil.</li>
+          <li>Armazenar os dados dos pacientes, disponibilizando formulario e envio de documenetos.</li>
+          <li>Disponibilizar os dados dos beneficiados para a ong.</li>
+        </ul>
+      </article>
 
-      <h3>Apolônias do Bem</h3>
-      <p>
-        Iniciativa que oferece tratamento odontológico a mulheres cis e trans vítimas de violência, 
-        com foco na recuperação da autoestima e saúde bucal.
-      </p>
-
-      <h2>O Site</h2>
-      <p>
-        Este projeto visa criar uma plataforma de <strong>gestão de atendimentos</strong>, permitindo
-        que a ONG organize contatos, cadastros e comunicações com agilidade e transparência.
-      </p>
-
-      <h2>Tecnologias</h2>
-      <p>HTML, CSS e, futuramente, JavaScript para tornar o sistema dinâmico.</p>
-
-      <h2>Roadmap</h2>
-      <p>Sprint 1: site estático</p>
-      <p>Sprint 2: formulários dinâmicos</p>
-      <p>Sprint 3: integração com banco de dados</p>
-      <p>Sprint 4: relatórios e gestão</p>
+      <article class="card">
+        <h2>Tecnologias utilizadas</h2>
+        <p>HTML5, CSS3 (Flexbox e Grid), JavaScript e boas práticas de UX/UI.</p>
+      </article>
+      <article class="card">
+        <h2>Roadmap</h2>
+        <p> Sprint 1: site estático - Sprint 2: formulários dinâmicos - Sprint 3: integração com banco de dados - Sprint 4: relatórios e gestão.</p>
+      </article>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 - Central de Atendimentos Turma do Bem</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <p>© <span id="year"></span> Projeto Challenge — Todos os direitos reservados</p>
+    </div>
   </footer>
+  
+
+  <script src="script.js" defer></script>
 </body>
 </html>

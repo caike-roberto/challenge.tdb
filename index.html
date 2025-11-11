@@ -1,51 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Home | Central de Atendimento Turma do Bem</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projeto Turma Do Bem — Home</title>
+  <meta name="description" content="Site do projeto — Sprint 02 responsivo e acessível" />
+  <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Turma do Bem - Central de Atendimentos</h1>
-      <ul>
-        <li><a href="index.html" class="active">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="integrantes.html">Integrantes</a></li>
-      </ul>
-    </nav>
+ 
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Página inicial do projeto">
+        <img src="imagens/turmalogo.png" alt="tdb-logo.png" class="logo" />
+        <span class="brand-name">Gestão Comunica Bem</span>
+      </a>
+
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" role="navigation" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="formulario.html">Formulário</a></li>
+         <li><a href="documentos.html">Enviar Documentos</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-texto">
-        <h2>Gestão de Atendimentos Simplificada</h2>
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Bem-vindo ao Projeto tdb Gestão Comunica Bem</h1>
         <p>Centralize, organize e agilize todos os contatos em uma única plataforma.</p>
-        <a href="sobre.html" class="btn">Saiba mais</a>
+        <p class="cta-row">
+          <a class="btn primary" href="sobre.html">Saiba mais</a>
+          <a class="btn outline" href="contato.html">Entrar em contato</a>
+        </p>
       </div>
-      <div class="hero-imagem">
-        <img src="imagens/tdb-logo.png" alt="Logo Turma do Bem">
+      <figure class="hero-figure" aria-hidden="false">
+        <img src="imagens/tdb-logo.png" alt="tdb" />
+      </figure>
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">Sobre o Projeto</h2>
+      <div class="grid features-grid">
+        <article class="card" role="article">
+          <h3>Turma do Bem</h3>
+          <p>A Tdb é uma ONG que oferece tratamento odontológico gratuito para pessoas em situação de vulnerabilidade social, conectando dentistas voluntários a crianças, jovens e mulheres vítimas de violência.</p>
+        </article>
+
+        <article class="card" role="article">
+          <h3>Gestão Comunica Bem</h3>
+          <p>Tem a Função de ajudar o usuario na comunicação, envio de dados e no processo de atendimendo, assim como busca ajudar os dentistas da ong</p>
+        </article>
+
+
+      </div>
+    </section>
+
+
+
+    <section class="team" aria-labelledby="team-title">
+      <h2 id="team-title">Integrantes</h2>
+      <div class="grid team-grid">
+        <article class="member card" role="article">
+          <img src="imagens/foto_caike.jpg" alt="Foto do caike" />
+          <h3>Caike Roberto de Souza Hollo</h3>
+          <p>RM: 568104 | Turma: 1TDSPA.</p>
+        </article>
+
+        <article class="member card" role="article">
+          <img src="imagens/Imagem do WhatsApp de 2025-10-11 à(s) 20.10.50_362515f8.jpg" alt="Foto do gui" />
+          <h3>Guilherme Sena</h3>
+          <p>RM: 568101 | Turma: 1TDSPA</p>
+        </article>
+
+        <article class="member card" role="article">
+          <img src="imagens/Imagem do WhatsApp de 2025-10-10 à(s) 19.46.48_28d099b0.jpg" alt="Foto do igor" />
+          <h3>Igor Dantas da Silva</h3>
+          <p>RM: 538337 | Turma: 1TDSPA</p>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 - Central de Atendimentos | Todos os direitos reservados.</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/ongturmadobem"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.facebook.com/turmadobem"><i class="fa-brands fa-facebook"></i></a>
-      <a href="mailto:comunicacao@tdb.org.br"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://maps.app.goo.gl/psBeoV17UDQxwr7DA"><i class="fa-solid fa-location-dot"></i></a>
-      <a href="https://twitter.com/turmadobem"><i class="fa-brands fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/company/turma-do-bem"><i class="fa-brands fa-linkedin"></i></a>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <ul>
+          <li><a href="index.html">Home </a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">© <span id="year"></span> Projeto Challenge — Todos os direitos reservados</p>
     </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
-
-

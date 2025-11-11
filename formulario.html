@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="form.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="imagens/turmalogo.png" alt="Logo do site" class="logo">
+        <span>Gestão Comunica Bem</span>
+      </a>
+      <nav class="primary-nav">
+        <ul>
+         <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="formulario.html">Formulário</a></li>
+         <li><a href="documentos.html">Enviar Documentos</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Formulário de Cadastro</h1>
+    <p>Preencha seus dados e envie seus documentos para análise.</p>
+
+    <form id="cadastroForm">
+      <fieldset class="card">
+        <legend>Informações Pessoais</legend>
+
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" name="idade" min="1" required>
+
+        <label for="genero">Gênero</label>
+        <select id="genero" name="genero" required>
+          <option value="">Selecione</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select>
+
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado" required>
+          <option value="">Selecione seu estado</option>
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="PR">Paraná</option>
+          <option value="BA">Bahia</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="PE">Pernambuco</option>
+          <option value="outro">Outro</option>
+              <input type="submit" value="Enviar Formulário">
+        </select>
+      </fieldset>
+
+     
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 - Meu Site Responsivo</p>
+  </footer>
+</body>
+</html>
