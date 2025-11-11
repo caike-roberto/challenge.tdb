@@ -3,57 +3,96 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contato — Projeto Challenge</title>
+  <title>Contato — Gestão Comunica Bem</title>
+
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
- 
 
   <header class="site-header">
     <div class="container header-inner">
+
       <a class="brand" href="index.html">
-        <img src="imagens/turmalogo.png" class="logo" />
+        <img src="imagens/turmalogo.png" alt="Logotipo Gestão Comunica Bem" class="logo" />
         <span class="brand-name">Gestão Comunica Bem</span>
       </a>
 
-      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu">
+      <button
+        class="menu-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+      >
         <span class="hamburger"></span>
       </button>
 
-      <nav id="primary-navigation" class="primary-nav">
+      <nav id="primary-navigation" class="primary-nav" aria-label="Menu principal">
         <ul>
-         <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li><a href="contato.html" class="active">Contato</a></li>
           <li><a href="formulario.html">Formulário</a></li>
-         <li><a href="documentos.html">Enviar Documentos</a></li>
+          <li><a href="documentos.html">Enviar Documentos</a></li>
           <li><a href="integrantes.html">Integrantes</a></li>
         </ul>
       </nav>
+
     </div>
   </header>
 
+
+
   <main id="main" class="container">
-    <h1>Entre em contato</h1>
-    <form id="contact-form" class="card" novalidate>
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+    <section aria-labelledby="titulo-contato">
+      <h1 id="titulo-contato">Entre em contato</h1>
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Escreva sua mensagem aqui..."></textarea>
+      <form id="contact-form" class="card" novalidate>
+        
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Seu nome completo"
+          required
+        />
 
-      <button type="submit" class="btn primary">Enviar</button>
-      <p id="contato-msg" class="form-msg" aria-live="polite"></p>
-    </form>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="seu@email.com"
+          required
+        />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea
+          id="mensagem"
+          name="mensagem"
+          rows="4"
+          placeholder="Escreva sua mensagem aqui..."
+          required
+        ></textarea>
+
+        <button type="submit" class="btn primary">Enviar</button>
+
+        <p id="contato-msg" class="form-msg" aria-live="polite"></p>
+      </form>
+
+    </section>
+
   </main>
+
+
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <nav class="footer-nav">
+
+      <nav class="footer-nav" aria-label="Links do rodapé">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
@@ -61,32 +100,38 @@
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
+
       <p>© <span id="year"></span> Projeto Challenge — Todos os direitos reservados</p>
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+
+  
   <script>
-    // Validação simples do formulário de contato
-    document.getElementById('contact-form').addEventListener('submit', (e) => {
+    
+    document.getElementById("contact-form").addEventListener("submit", (e) => {
       e.preventDefault();
-      const nome = document.getElementById('nome').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const msg = document.getElementById('mensagem').value.trim();
-      const alerta = document.getElementById('contato-msg');
+
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const msg = document.getElementById("mensagem").value.trim();
+      const alerta = document.getElementById("contato-msg");
 
       if (!nome || !email || !msg) {
         alerta.textContent = "Por favor, preencha todos os campos.";
         return;
       }
-      const re = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!re.test(email)) {
         alerta.textContent = "Insira um email válido.";
         return;
       }
+
       alerta.textContent = "Mensagem enviada com sucesso! Obrigado pelo contato.";
       e.target.reset();
     });
   </script>
+
 </body>
 </html>
