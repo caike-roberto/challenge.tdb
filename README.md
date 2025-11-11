@@ -17,3 +17,8 @@ pessoas que solicitam ajuda.
 - integrantes.html — Página da equipe com fotos e links  
 - style.css — Estilos compartilhados  
 - assets/img/ — Fotos dos integrantes
+- formulario.html - opçao de formulario
+- documentos.html - entrega de documentos
+- script.js - interação do js no geral do site
+- form.js - js do formulario 
+- documentos.js - js dos docmentos
