@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const doc = {
-      nome: nome,
+      nome,
       arquivo: arquivo.name,
-      data: new Date().toLocaleString("pt-BR")
+      data: new Date().toLocaleString("pt-BR"),
     };
 
     documentos.push(doc);
@@ -31,35 +31,40 @@ document.addEventListener("DOMContentLoaded", () => {
     atualizarLista();
   });
 
+  
   function atualizarLista() {
     ul.innerHTML = "";
 
     if (documentos.length === 0) {
-      lista.style.display = "none";
+      lista.hidden = true;   // 
       return;
     }
 
-    lista.style.display = "block";
+    lista.hidden = false;
 
     documentos.forEach((doc, index) => {
       const li = document.createElement("li");
       li.innerHTML = `
-        <span>${doc.nome} — <small>${doc.arquivo}</small> <br><small>${doc.data}</small></span>
+        <span>
+          ${doc.nome} — <small>${doc.arquivo}</small>
+          <br><small>${doc.data}</small>
+        </span>
         <button class="excluir" data-index="${index}">Excluir</button>
       `;
       ul.appendChild(li);
     });
 
     document.querySelectorAll(".excluir").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        const i = e.target.dataset.index;
+      btn.onclick = () => {
+        const i = btn.dataset.index;
         documentos.splice(i, 1);
         localStorage.setItem("documentos", JSON.stringify(documentos));
         atualizarLista();
-      });
+      };
     });
   }
 
+ 
   limparBtn.addEventListener("click", () => {
     if (confirm("Tem certeza que deseja limpar todos os registros?")) {
       localStorage.removeItem("documentos");
