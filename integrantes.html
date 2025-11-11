@@ -6,13 +6,12 @@
   <title>Integrantes — Projeto Challenge</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
- 
 
+<body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <img src="imagens/turmalogo.png" alt="Logotipo" class="logo" />
+        <img src="imagens/turmalogo.png" alt="Logotipo do projeto" class="logo" />
         <span class="brand-name">Gestão Comunica Bem</span>
       </a>
 
@@ -20,15 +19,15 @@
         <span class="hamburger"></span>
       </button>
 
-      <nav id="primary-navigation" class="primary-nav">
+      <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contato.html">Contato</a></li>
           <li><a href="formulario.html">Formulário</a></li>
-         <li><a href="documentos.html">Enviar Documentos</a></li>
-          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="documentos.html">Enviar Documentos</a></li>
+          <li><a href="integrantes.html" aria-current="page">Integrantes</a></li>
         </ul>
       </nav>
     </div>
@@ -36,36 +35,43 @@
 
   <main id="main" class="container">
     <h1>Integrantes do Projeto</h1>
-         <div class="grid team-grid">
-        <article class="member card" role="article">
-          <img src="imagens/foto_caike.jpg" alt="Foto do caike" />
-          <h3>Caike Roberto de Souza Hollo</h3>
-          <p>RM: 568104 | Turma: 1TDSPA.</p>
-        <a href="https://github.com/caike-roberto" target="_blank">GitHub</a> |
-          <a href="https://www.linkedin.com/in/caike-roberto-a43229388" target="_blank">LinkedIn</a>
-        </article>
 
-        <article class="member card" role="article">
-          <img src="imagens/Imagem do WhatsApp de 2025-10-11 à(s) 20.10.50_362515f8.jpg" alt="Foto do gui" />
-          <h3>Guilherme Sena</h3>
-          <p>RM: 568101 | Turma: 1TDSPA</p>
+    <div class="grid team-grid">
+      <article class="member card">
+        <img src="imagens/foto_caike.jpg" alt="Foto de Caike Roberto de Souza Hollo" />
+        <h3>Caike Roberto de Souza Hollo</h3>
+        <p>RM: 568104 | Turma: 1TDSPA</p>
+        <p>
+          <a href="https://github.com/caike-roberto" target="_blank">GitHub</a> |
+          <a href="https://www.linkedin.com/in/caike-roberto-a43229388" target="_blank">LinkedIn</a>
+        </p>
+      </article>
+
+      <article class="member card">
+        <img src="imagens/Imagem do WhatsApp de 2025-10-11 à(s) 20.10.50_362515f8.jpg" alt="Foto de Guilherme Sena" />
+        <h3>Guilherme Sena</h3>
+        <p>RM: 568101 | Turma: 1TDSPA</p>
+        <p>
           <a href="https://github.com/sena-guilherme" target="_blank">GitHub</a> |
           <a href="https://www.linkedin.com/in/guilherme-sena-7126b5328" target="_blank">LinkedIn</a>
-        </article>
+        </p>
+      </article>
 
-        <article class="member card" role="article">
-          <img src="imagens/Imagem do WhatsApp de 2025-10-10 à(s) 19.46.48_28d099b0.jpg" alt="Foto do igor" />
-          <h3>Igor Dantas da Silva</h3>
-          <p>RM: 538337 | Turma: 1TDSPA</p>
+      <article class="member card">
+        <img src="imagens/Imagem do WhatsApp de 2025-10-10 à(s) 19.46.48_28d099b0.jpg" alt="Foto de Igor Dantas da Silva" />
+        <h3>Igor Dantas da Silva</h3>
+        <p>RM: 538337 | Turma: 1TDSPA</p>
+        <p>
           <a href="https://github.com/Igor-D1" target="_blank">GitHub</a> |
           <a href="https://www.linkedin.com/in/igor-dantas-0092b2384" target="_blank">LinkedIn</a>
-        </article>
-      </div>
+        </p>
+      </article>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <nav class="footer-nav">
+      <nav class="footer-nav" aria-label="Links do rodapé">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
@@ -80,3 +86,4 @@
   <script src="script.js" defer></script>
 </body>
 </html>
+
