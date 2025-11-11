@@ -3,17 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projeto Turma Do Bem — Home</title>
+  <title>Projeto Turma do Bem — Home</title>
   <meta name="description" content="Site do projeto — Sprint 02 responsivo e acessível" />
   <link rel="stylesheet" href="style.css" />
-
 </head>
+
 <body>
- 
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Página inicial do projeto">
-        <img src="imagens/turmalogo.png" alt="tdb-logo.png" class="logo" />
+        <img src="imagens/turmalogo.png" alt="Logo do projeto" class="logo" />
         <span class="brand-name">Gestão Comunica Bem</span>
       </a>
 
@@ -21,14 +20,14 @@
         <span class="hamburger"></span>
       </button>
 
-      <nav id="primary-navigation" class="primary-nav" role="navigation" aria-label="Navegação principal">
+      <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contato.html">Contato</a></li>
           <li><a href="formulario.html">Formulário</a></li>
-         <li><a href="documentos.html">Enviar Documentos</a></li>
+          <li><a href="documentos.html">Enviar Documentos</a></li>
           <li><a href="integrantes.html">Integrantes</a></li>
         </ul>
       </nav>
@@ -38,54 +37,53 @@
   <main id="main" class="container">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <h1 id="hero-title">Bem-vindo ao Projeto tdb Gestão Comunica Bem</h1>
+        <h1 id="hero-title">Bem-vindo ao Projeto Gestão Comunica Bem</h1>
         <p>Centralize, organize e agilize todos os contatos em uma única plataforma.</p>
+
         <p class="cta-row">
           <a class="btn primary" href="sobre.html">Saiba mais</a>
           <a class="btn outline" href="contato.html">Entrar em contato</a>
         </p>
       </div>
-      <figure class="hero-figure" aria-hidden="false">
-        <img src="imagens/tdb-logo.png" alt="tdb" />
+
+      <figure class="hero-figure">
+        <img src="imagens/tdb-logo.png" alt="Marca Turma do Bem" />
       </figure>
     </section>
 
     <section class="features" aria-labelledby="features-title">
       <h2 id="features-title">Sobre o Projeto</h2>
       <div class="grid features-grid">
-        <article class="card" role="article">
+        <article class="card">
           <h3>Turma do Bem</h3>
-          <p>A Tdb é uma ONG que oferece tratamento odontológico gratuito para pessoas em situação de vulnerabilidade social, conectando dentistas voluntários a crianças, jovens e mulheres vítimas de violência.</p>
+          <p>A TDB é uma ONG que oferece tratamento odontológico gratuito para pessoas em situação de vulnerabilidade social, conectando dentistas voluntários a crianças, jovens e mulheres vítimas de violência.</p>
         </article>
 
-        <article class="card" role="article">
+        <article class="card">
           <h3>Gestão Comunica Bem</h3>
-          <p>Tem a Função de ajudar o usuario na comunicação, envio de dados e no processo de atendimendo, assim como busca ajudar os dentistas da ong</p>
+          <p>Auxilia o usuário na comunicação, envio de dados e no processo de atendimento, além de ajudar os dentistas da ONG.</p>
         </article>
-
-
       </div>
     </section>
 
-
-
     <section class="team" aria-labelledby="team-title">
       <h2 id="team-title">Integrantes</h2>
+
       <div class="grid team-grid">
-        <article class="member card" role="article">
-          <img src="imagens/foto_caike.jpg" alt="Foto do caike" />
+        <article class="member card">
+          <img src="imagens/foto_caike.jpg" alt="Foto de Caike" />
           <h3>Caike Roberto de Souza Hollo</h3>
-          <p>RM: 568104 | Turma: 1TDSPA.</p>
+          <p>RM: 568104 | Turma: 1TDSPA</p>
         </article>
 
-        <article class="member card" role="article">
-          <img src="imagens/Imagem do WhatsApp de 2025-10-11 à(s) 20.10.50_362515f8.jpg" alt="Foto do gui" />
+        <article class="member card">
+          <img src="imagens/Imagem do WhatsApp de 2025-10-11 à(s) 20.10.50_362515f8.jpg" alt="Foto de Guilherme" />
           <h3>Guilherme Sena</h3>
           <p>RM: 568101 | Turma: 1TDSPA</p>
         </article>
 
-        <article class="member card" role="article">
-          <img src="imagens/Imagem do WhatsApp de 2025-10-10 à(s) 19.46.48_28d099b0.jpg" alt="Foto do igor" />
+        <article class="member card">
+          <img src="imagens/Imagem do WhatsApp de 2025-10-10 à(s) 19.46.48_28d099b0.jpg" alt="Foto de Igor" />
           <h3>Igor Dantas da Silva</h3>
           <p>RM: 538337 | Turma: 1TDSPA</p>
         </article>
@@ -93,20 +91,26 @@
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container footer-inner">
       <nav class="footer-nav" aria-label="Links do rodapé">
         <ul>
-          <li><a href="index.html">Home </a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
-      <p class="copyright">© <span id="year"></span> Projeto Challenge — Todos os direitos reservados</p>
+
+      <p class="copyright">
+        © <span id="year"></span> Projeto Challenge — Todos os direitos reservados
+      </p>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
 </body>
 </html>
+
+
+  
