@@ -1,8 +1,8 @@
-import fotoCaike from '@/assets/foto_caike.jpg';
-import fotoGuilherme from '@/assets/foto_guilherme.jpg';
-import fotoIgor from '@/assets/foto_igor.jpg';
-import type { Integrantess } from '@/types';
+import fotoCaike from '../assets/foto_caike.jpg';
+import fotoGuilherme from '../assets/foto_guilherme.jpg';
+import fotoIgor from '../assets/foto_igor.jpg';
 import type { TeamMember } from '../types';
+
 
 const members: TeamMember [] = [
   {

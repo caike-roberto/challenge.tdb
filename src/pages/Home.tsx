@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import Button from '@/components/Button';
-import Card from '@/components/Card';
-import tdbLogo from '@/assets/tdb-logo.png';
-import fotoCaike from '@/assets/foto_caike.jpg';
-import fotoGuilherme from '@/assets/foto_guilherme.jpg';
-import fotoIgor from '@/assets/foto_igor.jpg';
+import Button from '../components/Button';
+import Card from '../components/Card';
+import tdbLogo from '../assets/tdb-logo.png';
+import fotoCaike from '../assets/foto_caike.jpg';
+import fotoGuilherme from '../assets/foto_guilherme.jpg';
+import fotoIgor from '../assets/foto_igor.jpg';
 
 const teamPreview = [
   { name: 'Caike Roberto de Souza Hollo', rm: '568104', photo: fotoCaike },
@@ -15,7 +15,7 @@ const teamPreview = [
 const Home = () => {
   return (
     <div>
-      {/* inicio */}
+      {/* Hero */}
       <section className="py-16 md:py-24 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1 text-center md:text-left">
@@ -34,13 +34,14 @@ const Home = () => {
               </Link>
             </div>
           </div>
+
           <div className="flex-shrink-0">
             <img src={tdbLogo} alt="Marca Turma do Bem" className="w-48 md:w-64 mx-auto" />
           </div>
         </div>
       </section>
 
-      {/* parte do sobre do projeto */}
+      {/* Sobre o Projeto */}
       <section className="bg-card py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Sobre o Projeto</h2>
@@ -52,6 +53,7 @@ const Home = () => {
                 vítimas de violência.
               </p>
             </Card>
+
             <Card title="Gestão Comunica Bem">
               <p>
                 Auxilia o usuário na comunicação, envio de dados e no processo de atendimento, além de
@@ -62,10 +64,11 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Integrantes  */}
+      {/* Integrantes */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Integrantes</h2>
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamPreview.map((member) => (
               <div key={member.rm} className="bg-card rounded-xl p-6 shadow-md text-center">
@@ -75,8 +78,16 @@ const Home = () => {
                   className="w-32 h-32 rounded-full object-cover mx-auto mb-4"
                 />
                 <h3 className="text-lg font-semibold">{member.name}</h3>
-                <p className="text-muted-foreground text-sm">RM: {member.rm} | Turma: 1TDSPA</p>
+                <p className="text-muted-foreground text-sm">
+                  RM: {member.rm} | Turma: 1TDSPA
+                </p>
               </div>
             ))}
           </div>
         </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home;

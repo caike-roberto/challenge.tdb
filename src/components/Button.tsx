@@ -1,4 +1,4 @@
-import { type ButtonProps } from '@/types';
+import { type ButtonProps } from '../types';
 
 const variantClasses: Record<string, string> = {
   primary: 'bg-accent text-accent-foreground hover:opacity-90',

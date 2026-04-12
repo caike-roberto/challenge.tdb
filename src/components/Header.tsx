@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import turmalogo from '@/assets/turmalogo.png';
-import type { NavItem } from '@/types';
+import turmalogo from '../assets/turmalogo.png';
+import type { NavItem } from '../types';
 
 const navItems: NavItem[] = [
   { label: 'Home', path: '/' },

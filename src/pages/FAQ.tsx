@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { FAQItem } from '@/types';
+import type { FAQItem } from '../types';
 
 const faqData: FAQItem[] = [
   { question: 'Quem pode usar a central?', answer: 'Dentistas, voluntários, doadores e beneficiados.' },

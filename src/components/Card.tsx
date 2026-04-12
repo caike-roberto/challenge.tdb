@@ -1,4 +1,4 @@
-import { type CardProps } from '@/types';
+import { type CardProps } from '../types';
 
 const Card = ({ title, children, className = '' }: CardProps) => {
   return (

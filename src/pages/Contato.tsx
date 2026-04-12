@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
-import Button from '@/components/Button';
-import type { ContactFormData } from '@/types';
+import Button from '../components/Button';
+import type { ContactFormData } from '../types';
 
 const Contato = () => {
   const [successMsg, setSuccessMsg] = useState('');
