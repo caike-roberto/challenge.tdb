@@ -1,24 +1,73 @@
+# React + TypeScript + Vite
 
-# Central de Atendimentos - Projeto ONG
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 📖 Descrição
-Ferramenta integrada de gestão de atendimentos para organizar, 
-direcionar e controlar todos os contatos dos públicos: dentistas, voluntários, beneficiados, doadores e 
-pessoas que solicitam ajuda.
+Currently, two official plugins are available:
 
-## 🚀 Link do Projeto (GitHub Pages)
-👉 [challenge.tdb](https://github.com/caike-roberto/challenge.tdb/tree/main)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🧩 Estrutura do Projeto
-- index.html — Página inicial  
-- sobre.html — Sobre o projeto  
-- faq.html — Perguntas frequentes  
-- contato.html — Página de contato com formulário  
-- integrantes.html — Página da equipe com fotos e links  
-- style.css — Estilos compartilhados  
-- assets/img/ — Fotos dos integrantes
-- formulario.html - opçao de formulario
-- documentos.html - entrega de documentos
-- script.js - interação do js no geral do site
-- form.js - js do formulario 
-- documentos.js - js dos docmentos
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
