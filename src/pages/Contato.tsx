@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+
 import { useState } from 'react';
 import Button from '../components/Button';
 import type { ContactFormData } from '../types';
@@ -71,9 +71,10 @@ const Contato = () => {
         {successMsg && (
           <p className="text-primary font-medium mt-2">{successMsg}</p>
         )}
-      </form>
+      </form>  
     </div>
   );
 };
 
 export default Contato;
+import { useForm } from 'react-hook-form';
