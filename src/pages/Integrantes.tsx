@@ -1,9 +1,10 @@
 import fotoCaike from '@/assets/foto_caike.jpg';
 import fotoGuilherme from '@/assets/foto_guilherme.jpg';
 import fotoIgor from '@/assets/foto_igor.jpg';
-import type { integrantes } from '@/types';
+import type { Integrantess } from '@/types';
+import type { TeamMember } from '../types';
 
-const members: integrantes[] = [
+const members: TeamMember [] = [
   {
     name: 'Caike Roberto de Souza Hollo',
     rm: '568104',
