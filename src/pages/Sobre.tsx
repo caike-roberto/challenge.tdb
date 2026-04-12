@@ -3,10 +3,9 @@ import Card from '../components/Card';
 const Sobre = () => {
   return (
     <div>
-      {/* Page Header */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none" />
-        <div className="max-w-4xl mx-auto text-center relative"><p></p>
+        <div className="max-w-4xl mx-auto text-center relative">
           <div className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
             Conheça o projeto
           </div>
@@ -57,12 +56,15 @@ const Sobre = () => {
             <Card title="🗺️ Roadmap">
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
-                  { sprint: 'Sprint 1', desc: 'Site estático', status: '✅' },
-                  { sprint: 'Sprint 2', desc: 'Formulários dinâmicos', status: '🔄' },
-                  { sprint: 'Sprint 3', desc: 'Integração com banco de dados', status: '⏳' },
-                  { sprint: 'Sprint 4', desc: 'Relatórios e gestão', status: '⏳' },
+                  { sprint: 'Sprint 1', desc: 'Site estático', status: '✅', done: true },
+                  { sprint: 'Sprint 2', desc: 'Formulários dinâmicos', status: '🔄', done: false },
+                  { sprint: 'Sprint 3', desc: 'Integração com banco de dados', status: '⏳', done: false },
+                  { sprint: 'Sprint 4', desc: 'Relatórios e gestão', status: '⏳', done: false },
                 ].map((item) => (
-                  <div key={item.sprint} className="bg-secondary rounded-xl p-4 border border-border">
+                  <div
+                    key={item.sprint}
+                    className={`rounded-xl p-4 border ${item.done ? 'bg-green-50 border-green-200' : 'bg-white border-gray-200'}`}
+                  >
                     <div className="flex items-center gap-2 mb-1">
                       <span>{item.status}</span>
                       <span className="font-bold text-foreground text-sm">{item.sprint}</span>
