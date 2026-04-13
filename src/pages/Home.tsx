@@ -124,6 +124,7 @@ const Home = () => {
       </section>
 
       {/* Integrantes Preview */}
+     <section className="section-padding section-alt pb-0"></section>
       <section className="section-padding section-alt">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
