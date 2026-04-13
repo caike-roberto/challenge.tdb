@@ -6,3 +6,10 @@ Este projeto foi desenvolvido como parte de um desafio acadêmico, com o objetiv
 
 A proposta consiste no desenvolvimento de um sistema web que visa otimizar processos internos, melhorar a organização de informações e facilitar a comunicação entre os envolvidos.
 
+## 🎯 Objetivos
+
+* Analisar os requisitos da ONG e identificar oportunidades de melhoria
+* Desenvolver uma solução digital eficiente e escalável
+* Aplicar boas práticas de desenvolvimento front-end
+* Proporcionar uma interface intuitiva e acessível
+
