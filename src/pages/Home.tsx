@@ -97,7 +97,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Sobre o Projeto */}
+    
       <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
@@ -123,7 +123,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Integrantes Preview */}
+     
      <section className="section-padding section-alt pb-0"></section>
       <section className="section-padding section-alt">
         <div className="max-w-6xl mx-auto">
@@ -162,7 +162,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA */}
+    
       <section className="section-padding">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-foreground">
