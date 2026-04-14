@@ -9,8 +9,11 @@ const Contato = () => {
     register,
     handleSubmit,
     reset,
+    watch,
     formState: { errors },
   } = useForm<ContactFormData>();
+
+  const mensagemValue = watch('mensagem') || '';
 
   const onSubmit = (data: ContactFormData) => {
     console.log('Formulário enviado:', data);
@@ -55,15 +58,52 @@ const Contato = () => {
         </div>
 
         <div>
-          <label htmlFor="mensagem" className="block font-semibold mb-1">Mensagem:</label>
+          <label htmlFor="mensagem" className="block font-semibold mb-1">
+            Mensagem:
+          </label>
+
           <textarea
             id="mensagem"
             rows={4}
+            maxLength={500}
             placeholder="Escreva sua mensagem aqui..."
-            className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition resize-y"
-            {...register('mensagem', { required: 'A mensagem é obrigatória' })}
+            className={`w-full px-4 py-3 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-ring transition resize-y ${
+              mensagemValue.length === 500
+                ? 'border-red-500'
+                : mensagemValue.length >= 450
+                ? 'border-yellow-500'
+                : 'border-input'
+            }`}
+            {...register('mensagem', {
+              required: 'A mensagem é obrigatória',
+              maxLength: {
+                value: 500,
+                message: 'A mensagem pode ter no máximo 500 caracteres',
+              },
+            })}
           />
-          {errors.mensagem && <p className="text-destructive text-sm mt-1">{errors.mensagem.message}</p>}
+
+          <p
+            className={`text-sm mt-1 ${
+              mensagemValue.length === 500
+                ? 'text-destructive'
+                : mensagemValue.length >= 450
+                ? 'text-yellow-500'
+                : 'text-muted-foreground'
+            }`}
+          >
+            {mensagemValue.length}/500 caracteres
+            {mensagemValue.length === 500 && ' — Você atingiu o limite máximo!'}
+            {mensagemValue.length >= 450 &&
+              mensagemValue.length < 500 &&
+              ' — Você está próximo do limite'}
+          </p>
+
+          {errors.mensagem && (
+            <p className="text-destructive text-sm mt-1">
+              {errors.mensagem.message}
+            </p>
+          )}
         </div>
 
         <Button type="submit" variant="primary">Enviar</Button>
