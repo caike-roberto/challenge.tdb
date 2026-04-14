@@ -8,7 +8,7 @@
  
  ## Funcionalidades
  
- *Cadastro de pacientes
+ * Cadastro de pacientes
  * Comunicação centralizada
  * Acompanhamento de solicitações
  * Página de perguntas frequentes (FAQ)
