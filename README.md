@@ -1,15 +1,32 @@
-# Challenge ONG Turma do Bem
+# 🦷 Gestão Comunica Bem
 
-## 📌 Descrição do Projeto
+### Projeto desenvolvido para o Challenge com o objetivo de melhorar a comunicação e organização da ONG Turma do Bem.
 
-Este projeto foi desenvolvido como parte de um desafio acadêmico, com o objetivo de analisar, projetar e implementar uma solução tecnológica para atender às necessidades da ONG Turma do Bem.
+# 📌 Sobre o Projeto
 
-A proposta consiste no desenvolvimento de um sistema web que visa otimizar processos internos, melhorar a organização de informações e facilitar a comunicação entre os envolvidos.
+### O Gestão Comunica Bem é uma aplicação web que centraliza a comunicação entre pacientes, dentistas voluntários e a ONG, facilitando o envio de informações e o acompanhamento dos atendimentos.
+ 
+ ## Funcionalidades
+ 
+ *Cadastro de pacientes
+ * Comunicação centralizada
+ * Acompanhamento de solicitações
+ * Página de perguntas frequentes (FAQ)
+ * Formulário de contato
+ * Página de integrantes
+ * Tecnologias Utilizadas
+ * React
+ * Vite
+ * TypeScript
+ * Tailwind CSS
+ * React Router DOM
+ * React Hook Form
 
-## 🎯 Objetivos
+## 👨‍💻 Integrantes
 
-* Analisar os requisitos da ONG e identificar oportunidades de melhoria
-* Desenvolver uma solução digital eficiente e escalável
-* Aplicar boas práticas de desenvolvimento front-end
-* Proporcionar uma interface intuitiva e acessível
+* Caike Roberto de Souza Hollo
+
+* Guilherme Sena
+
+* Igor Dantas da Silva
 
